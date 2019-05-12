@@ -1,23 +1,23 @@
 <template>
   <div class="card">
     <div class="heading">
-      <h2>{{ animal }}</h2>
+      <h2>{{ animal.name }}</h2>
       <i class="fas fa-fish fa-2x"></i>
     </div>
     <div class="img-container">
-      <img class="img" :src="img" alt="clownfish">
+      <img class="img" :src="animal.img" alt="clownfish">
     </div>
     <div class="content-container">
-      <div class="fact">{{ fact }}</div>
+      <div class="fact">{{ animal.fact }}</div>
       <ul class="details-list">
-        <li v-for="(detail, name) in details" :key="detail.name">
+        <li v-for="(detail, name) in animal.details" :key="detail.name">
           <b>{{ name }}</b>
           :
           {{ detail }}
         </li>
       </ul>
 
-      <div class="description">{{ description }}</div>
+      <div class="description">{{ animal.description }}</div>
     </div>
   </div>
 </template>
@@ -25,23 +25,7 @@
 <script>
 export default {
   name: "card",
-  data: function() {
-    return {
-      animal: "Clownfish",
-      img:
-        "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80",
-      fact:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, fuga. Dolores alias vel quo",
-      details: {
-        "Scientific Name": "Amphipriotine",
-        "Average length": "11 cm",
-        "Average Lifespan": "7 years",
-        Habitat: "Tropical Coral Reef"
-      },
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores eaque adipisci dolor deleniti voluptate iste quia, nostrum tenetur consectetur ab tempore quaerat quo. Ratione dolorem temporibus delectus ipsa perspiciatis."
-    };
-  }
+  props: ["animal"]
 };
 </script>
 
