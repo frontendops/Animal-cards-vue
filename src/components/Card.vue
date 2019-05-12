@@ -1,13 +1,16 @@
 <template>
   <div class="card">
-    <h2 class="heading">{{ animal }}</h2>
+    <div class="heading">
+      <h2>{{ animal }}</h2>
+      <i class="fas fa-fish fa-2x"></i>
+    </div>
     <div class="img-container">
       <img class="img" :src="img" alt="clownfish">
     </div>
     <div class="content-container">
       <div class="fact">{{ fact }}</div>
       <ul class="details-list">
-        <li v-for="(detail, name) in details">
+        <li v-for="(detail, name) in details" :key="detail.name">
           <b>{{ name }}</b>
           :
           {{ detail }}
@@ -45,8 +48,9 @@ export default {
 <style scoped>
 .card {
   max-width: 400px;
-  margin: 0 auto;
-  border: 1px solid black;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
 }
@@ -54,6 +58,9 @@ export default {
 .heading {
   text-align: left;
   padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .img-container {
@@ -65,7 +72,8 @@ export default {
 }
 
 .content-container {
-  border: 1px solid black;
+  border: 1px solid gray;
+  border-radius: 10px;
   margin: 0px 10px 10px 10px;
   text-align: left;
 }
