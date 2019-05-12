@@ -13,6 +13,8 @@
           {{ detail }}
         </li>
       </ul>
+
+      <div class="description">{{ description }}</div>
     </div>
   </div>
 </template>
@@ -33,7 +35,8 @@ export default {
         "Average Lifespan": "7 years",
         Habitat: "Tropical Coral Reef"
       },
-      description: "a fish from finding nemo"
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores eaque adipisci dolor deleniti voluptate iste quia, nostrum tenetur consectetur ab tempore quaerat quo. Ratione dolorem temporibus delectus ipsa perspiciatis."
     };
   }
 };
@@ -75,5 +78,9 @@ export default {
 .details-list {
   list-style: none;
   padding-left: 10px;
+}
+
+.description {
+  padding: 10px;
 }
 </style>
