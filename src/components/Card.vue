@@ -9,13 +9,13 @@
     </div>
     <div class="content-container">
       <div class="fact">{{ animal.fact }}</div>
-      <ul class="details-list">
-        <li v-for="(detail, name) in animal.details" :key="detail.name">
-          <b>{{ name }}</b>
-          :
-          {{ detail }}
-        </li>
-      </ul>
+      <!-- List goes here fam -->
+      <BaseCardList :details="animal.details">
+        <template slot-scope="props">
+          <b>{{ props.detail.label }}</b>
+          : {{ props.detail.value }}
+        </template>
+      </BaseCardList>
 
       <div class="description">{{ animal.description }}</div>
     </div>
@@ -23,9 +23,11 @@
 </template>
 
 <script>
+import BaseCardList from "./BaseCardList.vue";
 export default {
   name: "card",
-  props: ["animal"]
+  props: ["animal"],
+  components: { BaseCardList }
 };
 </script>
 

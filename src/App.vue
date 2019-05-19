@@ -21,12 +21,24 @@ export default {
             "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80",
           fact:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, fuga. Dolores alias vel quo",
-          details: {
-            "Scientific Name": "Amphipriotine",
-            "Average length": "11 cm",
-            "Average Lifespan": "7 years",
-            Habitat: "Tropical Coral Reef"
-          },
+          details: [
+            {
+              label: "Scientific Name",
+              value: "Amphriprotine"
+            },
+            {
+              label: "Average Length",
+              value: 11
+            },
+            {
+              label: "Average Lifepan",
+              value: "7 years"
+            },
+            {
+              label: "Habitat",
+              value: "Tropical Coral reef"
+            }
+          ],
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores eaque adipisci dolor deleniti voluptate iste quia, nostrum tenetur consectetur ab tempore quaerat quo. Ratione dolorem temporibus delectus ipsa perspiciatis."
         },
@@ -36,12 +48,24 @@ export default {
             "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80://images.unsplash.com/photo-1544552866-d3ed42536cfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80",
           fact:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, fuga. Dolores alias vel quo",
-          details: {
-            "Scientific Name": "doggy",
-            "Average length": "45 cm",
-            "Average Lifespan": "11 years",
-            Habitat: "Suburban homes"
-          },
+          details: [
+            {
+              label: "Scientific Name",
+              value: "doggy"
+            },
+            {
+              label: "Average Length",
+              value: 45
+            },
+            {
+              label: "Average Lifepan",
+              value: "11 years"
+            },
+            {
+              label: "Habitat",
+              value: "Tropical Coral reef"
+            }
+          ],
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores eaque adipisci dolor deleniti voluptate iste quia, nostrum tenetur consectetur ab tempore quaerat quo. Ratione dolorem temporibus delectus ipsa perspiciatis."
         }
