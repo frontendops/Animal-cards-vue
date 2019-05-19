@@ -12,8 +12,10 @@
       <!-- List goes here fam -->
       <BaseCardList :details="animal.details">
         <template slot-scope="props">
-          <b>{{ props.detail.label }}</b>
-          : {{ props.detail.value }}
+          <li>
+            <b>{{ props.detail.label }}</b>
+            : {{ props.detail.value }}
+          </li>
         </template>
       </BaseCardList>
 

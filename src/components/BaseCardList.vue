@@ -1,8 +1,8 @@
 <template>
   <ul class="details-list">
-    <li v-for="detail in details" :key="detail.value">
+    <template v-for="detail in details">
       <slot :detail="detail"></slot>
-    </li>
+    </template>
   </ul>
 </template>
 
