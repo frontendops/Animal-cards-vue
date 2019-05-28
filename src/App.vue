@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <Card v-for="animal in animals" :key="animal.fact" :animal="animal"/>
+    <BaseModal v-if="showModal" @close="toggleModal"/>
+    <Card v-for="animal in animals" :key="animal.fact" :animal="animal" v-on:open="toggleModal"/>
   </div>
 </template>
 
 <script>
 import Card from "./components/Card.vue";
-
+import BaseModal from "./components/BaseModal.vue";
 export default {
   name: "app",
   components: {
-    Card
+    Card,
+    BaseModal
   },
   data: function() {
     return {
+      showModal: false,
       animals: [
         {
           name: "Clownfish",
@@ -71,6 +74,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    toggleModal: function() {
+      this.showModal = !this.showModal;
+    }
   }
 };
 </script>

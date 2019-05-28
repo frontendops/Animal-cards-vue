@@ -20,6 +20,7 @@
       </BaseCardList>
 
       <div class="description">{{ animal.description }}</div>
+      <button @click="open">Open Modal</button>
     </div>
   </div>
 </template>
@@ -29,7 +30,12 @@ import BaseCardList from "./BaseCardList.vue";
 export default {
   name: "card",
   props: ["animal"],
-  components: { BaseCardList }
+  components: { BaseCardList },
+  methods: {
+    open: function() {
+      this.$emit("open");
+    }
+  }
 };
 </script>
 
